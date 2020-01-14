@@ -8,8 +8,12 @@ app.get('/', (req,res) => {
 app.get('/careerdevs', (req,res) => {
     res.send('Welcome to CareerDevs! Yay!');
 })
+const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+};
 
-mongoose.connect('mongodb+srv://johnf:skippy04@cluster0-pyvqf.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect('mongodb+srv://johnf:skippy04@cluster0-pyvqf.mongodb.net/test?retryWrites=true&w=majority',options, () => {
     console.log('Connected to MongoDB')
 });
 
