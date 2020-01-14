@@ -1,0 +1,11 @@
+{
+  "name": "devedrest02",
+  "version": "1.0.0",
+  "description": "Express REST API application using node.js\r created by: John Fruscella",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
