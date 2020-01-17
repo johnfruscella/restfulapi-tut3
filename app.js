@@ -1,21 +1,32 @@
 const express = require('express'); // Importing the package
 const app = express();// Execute the package
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const port = 3000;
+require('dotenv/config');
 
+app.use(bodyParser.json());
+
+//Import Routes
+const postsRoute = require('./routes/posts');
+
+app.use('/posts', postsRoute);
+
+//Routes
 app.get('/', (req, res) => {
     res.send('Welcome to the root route of my web server!!!!!');
 })
-app.get('/careerdevs', (req, res) => {
-    res.send('Welcome to CareerDevs! Yay!');
-})
+
+
+
+
 
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 };
 
-mongoose.connect('mongodb+srv://johnf:skippy04@cluster0-pyvqf.mongodb.net/test?retryWrites=true&w=majority', options, () => {
+mongoose.connect(process.env.DB_CONNECTION, options, () => {
     console.log('Connected to MongoDB')
 });
 
