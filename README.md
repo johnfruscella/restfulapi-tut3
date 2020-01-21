@@ -15,12 +15,12 @@ git add -A // What does this do?
 git commit -m "inital commit"
 
 npm init -y // creates package.json file
-npm install install express nodemon //
+npm install express nodemon //
 
 //npm is like the app store for node js applications
 // after npm install runs, it creates node_modules directory
 
-git checkout -b 0151_create_app.js //what does this do? name is argument
+git checkout -b 0151_create_app.js // Creates branch and goes into it. Filename is an argument.
 
 code app.js
-const express = require('express'); //calling the express 49 mins
+const express = require('express'); //calling the express 49 mins  "Express is a web application framework for Node. It provides various features that make web application development fast and easy which otherwise takes more time using only Node."
